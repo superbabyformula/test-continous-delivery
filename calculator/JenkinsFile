@@ -6,13 +6,13 @@ pipeline {
     }
     options { timeout(time: 1) }
     stages {
-        stage("Checkout") {
+        stage("Checkout Stage") {
             steps {
                 git url: 'https://github.com/superbabyformula/test-continous-delivery.git'
                 echo "Checked out source code."
             }
         }
-        stage("Compile") {
+        stage("Compile Stage") {
             steps {
                 sh '''
                     echo "PATH = ${PATH}"
@@ -22,7 +22,7 @@ pipeline {
                 echo "Complied source code."
             }
         }
-        stage("Test") {
+        stage("Test Stage") {
             steps {
                 sh "mvn test -f calculator/"    
             }
