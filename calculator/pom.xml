@@ -46,7 +46,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             
-            <plugin>
+<!--            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco.version}</version>
@@ -110,10 +110,10 @@
                                     </limits>
                                 </rule>
                             </rules>
-                            <!-- Sets the path to the file which contains the execution data. -->
+                             Sets the path to the file which contains the execution data. 
 
                             <dataFile>target/jacoco.exec</dataFile>
-                            <!-- Sets the output directory for the code coverage report. -->
+                             Sets the output directory for the code coverage report. 
                             <outputDirectory>target/jacoco-ut</outputDirectory>
                         </configuration>
                     </execution>
@@ -123,7 +123,7 @@
                         <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
                     </systemPropertyVariables>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 
