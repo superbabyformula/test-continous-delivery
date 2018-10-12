@@ -31,4 +31,11 @@ pipeline {
             }
         }
     }
+		post {
+				failure {
+						mail to: 'andyworzella@gmail.com',
+						subject: "Completed Pipeline for Calculcator ${currentBuild.fullDisplayName}",
+						body: "check: ${env.BUILD_URL}"
+				}
+		}
 }
