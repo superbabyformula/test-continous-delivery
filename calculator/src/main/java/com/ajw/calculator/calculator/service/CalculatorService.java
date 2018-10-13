@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ajw.calculator.calculator;
+package com.ajw.calculator.calculator.service;
 
 /**
  *
  * @author andy
  */
-public class Calculator {
-    public int sum(int x, int y) {
-        return x+y;
-    }
+public interface CalculatorService {
+    public int sum(int x, int y);
 }

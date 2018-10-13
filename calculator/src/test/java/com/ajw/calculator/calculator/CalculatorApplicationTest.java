@@ -5,6 +5,8 @@
  */
 package com.ajw.calculator.calculator;
 
+import com.ajw.calculator.calculator.service.CalculatorService;
+import com.ajw.calculator.calculator.service.impl.CalculatorServiceImpl;
 import junit.framework.Assert;
 import org.junit.Test;
 
@@ -22,7 +24,7 @@ public class CalculatorApplicationTest {
     
     @Test
     public void testSum() {
-        Calculator calculator = new Calculator();
-        Assert.assertEquals(calculator.sum(1, 1), 2);
+        CalculatorService calculatorService = new CalculatorServiceImpl();
+        Assert.assertEquals(calculatorService.sum(1, 1), 2);
     }
 }
