@@ -5,10 +5,13 @@
  */
 package com.ajw.calculator.calculator.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author andy
  */
+@Service
 public interface CalculatorService {
     public int sum(int x, int y);
 }
