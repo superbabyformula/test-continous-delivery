@@ -5,7 +5,6 @@
  */
 package com.ajw.calculator.calculator.service.impl;
 
-import com.ajw.calculator.calculator.service.CalculatorService;
 import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;

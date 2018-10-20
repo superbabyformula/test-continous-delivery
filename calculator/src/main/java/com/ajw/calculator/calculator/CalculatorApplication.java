@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * </p>
  * @author andy
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages="com.ajw.calculator")
 public class CalculatorApplication {
 
     /**

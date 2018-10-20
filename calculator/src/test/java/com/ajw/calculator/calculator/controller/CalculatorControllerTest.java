@@ -43,9 +43,13 @@ public class CalculatorControllerTest {
         Integer a = 1;
         Integer b = 2;
         Integer sum = a.intValue() + b.intValue();
+        
         when(calculatorService.sum(a.intValue(), b.intValue()))
-                .thenReturn(4);
-        this.mockMvc.perform(get("/calculator/sum")).andDo(print())
+                .thenReturn(sum);
+        this.mockMvc.perform(get("/calculator/sum")
+                .param("a",String.valueOf(a))
+                .param("b",String.valueOf(b)))
+                .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString(String.valueOf(sum))));
     }
