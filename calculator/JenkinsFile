@@ -25,9 +25,14 @@ pipeline {
                 echo "Complied source code."
             }
         }
-        stage("Test Stage") {
+        stage("Unit test Stage") {
             steps {
                 sh "mvn test -f calculator/"    
+            }
+        }
+				stage("Package Stage") {
+            steps {
+                sh "mvn package calculator/"    
             }
         }
     }
