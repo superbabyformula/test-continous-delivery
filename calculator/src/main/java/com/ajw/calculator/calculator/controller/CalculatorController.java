@@ -21,7 +21,7 @@ public class CalculatorController {
     @Autowired
     private CalculatorService calculatorService;
     
-    @RequestMapping("/sum")
+    @RequestMapping("/calculator/sum")
     String sum(@RequestParam("a") Integer a, @RequestParam("b") Integer b) {
         return String.valueOf(calculatorService.sum(a, b));
     }
