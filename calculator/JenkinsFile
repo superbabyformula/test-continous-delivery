@@ -32,15 +32,9 @@ pipeline {
         }
 				stage("Package Stage") {
             steps {
-                sh "mvn package calculator/"    
+                sh "mvn install calculator/"    
             }
         }
     }
-		post {
-				failure {
-						mail to: 'andyworzella@gmail.com',
-						subject: "Completed Pipeline for Calculcator ${currentBuild.fullDisplayName}",
-						body: "check: ${env.BUILD_URL}"
-				}
-		}
+		post {}
 }
