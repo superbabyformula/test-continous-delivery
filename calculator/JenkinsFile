@@ -35,5 +35,10 @@ pipeline {
                 sh "mvn install -f calculator/"    
             }
         }
+				stage("Docker Build Stage") {
+					steps {
+						sh "docker build -t andyworzella/calculator"
+					}
+				}
     }
 }
