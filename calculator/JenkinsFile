@@ -37,7 +37,7 @@ pipeline {
         }
 				stage("Docker Build Stage") {
 					steps {
-						sh "docker build -t andyworzella/calculator"
+						sh "docker ps"
 					}
 				}
     }
